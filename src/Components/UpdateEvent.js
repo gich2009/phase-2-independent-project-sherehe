@@ -1,21 +1,25 @@
-import { React, useState} from "react";
-import { useNavigate } from "react-router-dom";
+import { React, useState } from "react";
+import { useNavigate, useLocation } from "react-router-dom";
 import { endpoint } from "./HomePage";
 
 
-function CreateEvent() {
+function UpdateEvent({ onUpdateEvent }) {
+  const location = useLocation();
+  const event = location.state?.event;
+
   const [formData, setFormData] = useState({
-    name: '',
-    date: '',
-    description: '',
-    location: '',
-    transport: '',
-    paymentPlan: '',
-    meetPlace: '',
-    meetTime: '',
-    startTime: '',
-    organizers: '',
-    invitationCard: '',
+    name: event.name,
+    date: event.date,
+    description: event.description,
+    location: event.location,
+    transport: event.transport,
+    paymentPlan: event.paymentPlan,
+    meetPlace: event.meetPlace,
+    meetTime: event.meetTime,
+    startTime: event.startTime,
+    invitees: event.invitees,
+    organizers: event.organizers,
+    invitationCard: event.invitationCard,
   });
 
   const navigate = useNavigate();
@@ -29,37 +33,49 @@ function CreateEvent() {
     setFormData({ ...formData, invitationCard: e.target.files[0] });
   };
 
-  const handleSubmit = (e) => {
+const handleSubmit = (e) => {
     e.preventDefault();
     console.log(formData);
-    
-    fetch (endpoint, {method : "POST",
-                      headers: {"Content-Type": "application/json",
-                                "Accept": "application/json"},
-                      body: JSON.stringify(formData)})
-    .then ((response) => response.json())
-    .then ((data) => {
-      setFormData({
-        name: '',
-        date: '',
-        description: '',
-        location: '',
-        transport: '',
-        paymentPlan: '',
-        meetPlace: '',
-        meetTime: '',
-        startTime: '',
-        organizers: '',
-        invitationCard: '',
-      });
-      console.log(data)})
-    .catch((error) => console.log(error));
+
+    fetch(`${endpoint}/${event.id}`, { method:  "PATCH", 
+                                       headers: {"Content-Type" : "application/json",
+                                                  "Accept": "application/json"
+                                                 },
+                                       body:    JSON.stringify(formData)
+                                      })
+    .then((response) => response.json())
+    .then((data) => {console.log(data);
+      // setFormData({
+          //   name: data.name,
+          //   date: data.date,
+          //   description: data.description,
+          //   location: data.location,
+          //   transport: data.transport,
+          //   paymentPlan: data.paymentPlan,
+          //   meetPlace: data.meetPlace,
+          //   meetTime: data.meetTime,
+          //   startTime: data.startTime,
+          //   invitees: data.invitees,
+          //   organizers: data.organizers,
+          //   invitationCard: data.invitationCard,
+          // });
+          const updatedEvent = {id: event.id, ...formData};
+          console.log(updatedEvent);
+
+          onUpdateEvent(updatedEvent);
+          navigate("/home/myevents");
+          // navigate(`./../..`);
+        });
   };
+
+  const handleBack = (e) => {
+    navigate(`./../..`);
+  }
 
   return (
     <div className="create-event-container">
       <div className="create-event">
-        <h1>Create Event</h1>
+        <h1>Update Event</h1>
           <form onSubmit={handleSubmit} className="create-event-form">
             <div className="form-group">
               <div className="form-field">
@@ -120,75 +136,15 @@ function CreateEvent() {
                 {/* <input id="invitationCard" type="text" name="invitationCard" onChange={handleFileChange} /> */}
               </div>
               <div className="form-submit">
-                <button type="submit">Create Event</button>
+                <button type="submit">Update Event</button>
+                <button className="goback" onClick={handleBack}>Go back</button>
               </div>
             </div>
           </form>
       </div>
     </div>
- 
-);
+  );
 
 }
 
-export default CreateEvent;
-
-
-
-  // <form onSubmit={handleSubmit} className="create-event-form">
-  //     <div className="form-group">
-  //       <div className="form-field">
-  //         <label htmlFor="name">Name:</label>
-  //         <input id="name" type="text" name="name" value={formData.name} onChange={handleChange} placeholder="Event Name" />
-  //       </div>
-  //     <div className="form-field">
-  //       <label htmlFor="date">Date:</label>
-  //       <input id="date" type="date" name="date" value={formData.date} onChange={handleChange} placeholder="Event Date" />
-  //     </div>
-  //     <div className="form-field">
-  //       <label htmlFor="description">Description:</label>
-  //       <textarea id="description" name="description" value={formData.description} onChange={handleChange} placeholder="Describe the event" />
-  //     </div>
-  //     <div className="form-field">
-  //       <label htmlFor="location">Location:</label>
-  //       <input id="location" type="text" name="location" value={formData.location} onChange={handleChange} placeholder="Event Location" />
-  //     </div>
-  //     <div className="form-field">
-  //       <label htmlFor="transport">Transport:</label>
-  //       <select id="transport" name="transport" value={formData.transport} onChange={handleChange} placeholder="Select an option">
-  //         <option value="">Select</option>
-  //         <option value="provided">Provided</option>
-  //         <option value="not_provided">Not Provided</option>
-  //       </select>
-  //       </div>
-  //       <div className="form-field">
-  //         <label htmlFor="paymentPlan">Payment Plan:</label>
-  //         <select id="paymentPlan" name="paymentPlan" value={formData.paymentPlan} onChange={handleChange}>
-  //           <option value="">Select</option>
-  //           <option value="dutch">Dutch</option>
-  //           <option value="all_expense_paid">All Expense Paid</option>
-  //         </select>
-  //       </div>
-  //       <div className="form-field">
-  //         <label htmlFor="meetPlace">Meet Place:</label>
-  //         <input id="meetPlace" type="text" name="meetPlace" value={formData.meetPlace} onChange={handleChange} />
-  //       </div>
-  //       <div className="form-field">
-  //         <label htmlFor="meetTime">Meet Time:</label>
-  //         <input id="meetTime" type="time" name="meetTime" value={formData.meetTime} onChange={handleChange} />
-  //       </div>
-  //       <div className="form-field">
-  //         <label htmlFor="startTime">Start Time:</label>
-  //         <input id="startTime" type="time" name="startTime" value={formData.startTime} onChange={handleChange} />
-  //       </div>
-  //       <div className="form-field">
-  //         <label htmlFor="organizers">Organizers:</label>
-  //         <input id="organizers" type="text" name="organizers" value={formData.organizers} onChange={handleChange} />
-  //       </div>
-  //       <div className="form-field">
-  //         <label htmlFor="invitationCard">Invitation Card:</label>
-  //         <input id="invitationCard" type="file" name="invitationCard" onChange={handleFileChange} />
-  //       </div>
-  //       <div className="form-submit">
-  //         <button type="submit">Create Event</button>
-  //       </div>
+export default UpdateEvent;

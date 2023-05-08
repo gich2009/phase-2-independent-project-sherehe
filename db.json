@@ -1,7 +1,6 @@
 {
   "events": [
     {
-      "id": 1,
       "name": "John's Birthday Party",
       "date": "2023-05-15",
       "description": "A fun-filled birthday party for John",
@@ -13,10 +12,10 @@
       "startTime": "19:00",
       "invitees": "jane@gmail.com, bob@gmail.com",
       "organizers": "mike@gmail.com",
-      "invitationCard": "joanInvitation.jpg"
+      "invitationCard": "joanInvitation.jpg",
+      "id": 1
     },
     {
-      "id": 2,
       "name": "Olivia's Graduation Ceremony",
       "date": "2023-06-01",
       "description": "A ceremony to celebrate Olivia's graduation",
@@ -28,10 +27,10 @@
       "startTime": "16:00",
       "invitees": "jim@gmail.com, kate@gmail.com",
       "organizers": "lisa@gmail.com",
-      "invitationCard": "oliviasgraduation.webp"
+      "invitationCard": "oliviasgraduation.webp",
+      "id": 2
     },
     {
-      "id": 3,
       "name": "Community Fundraiser",
       "date": "2023-07-12",
       "description": "A fundraiser to support local charities",
@@ -43,7 +42,8 @@
       "startTime": "13:00",
       "invitees": "john@gmail.com, amy@gmail.com",
       "organizers": "paul@gmail.com",
-      "invitationCard": "graduationInvite.jpg"
+      "invitationCard": null,
+      "id": 3
     },
     {
       "id": 4,
@@ -61,7 +61,6 @@
       "invitationCard": "maryandjohnwedding.jpg"
     },
     {
-      "id": 5,
       "name": "Art Exhibition",
       "date": "2023-09-16",
       "description": "An exhibition showcasing local artists",
@@ -73,10 +72,10 @@
       "startTime": "18:00",
       "invitees": "david@gmail.com, linda@gmail.com",
       "organizers": "mary@gmail.com",
-      "invitationCard": "invitationCard.webp"
+      "invitationCard": null,
+      "id": 5
     },
     {
-      "id": 6,
       "name": "Halloween Party",
       "date": "2023-10-31",
       "description": "A spooky Halloween party for everyone",
@@ -88,10 +87,10 @@
       "startTime": "21:00",
       "invitees": "steve@gmail.com, rachel@gmail.com",
       "organizers": "tina@gmail.com",
-      "invitationCard": "invitation_card.png"
-      },
-      {
-      "id": 7,
+      "invitationCard": null,
+      "id": 6
+    },
+    {
       "name": "Movie Night",
       "date": "2023-11-18",
       "description": "A cozy movie night with friends",
@@ -103,9 +102,10 @@
       "startTime": "19:30",
       "invitees": "peter@gmail.com, carol@gmail.com",
       "organizers": "nancy@gmail.com",
-      "invitationCard": "invitation_card.jpg"
-      },
-      {
+      "invitationCard": null,
+      "id": 7
+    },
+    {
       "id": 8,
       "name": "Christmas Caroling",
       "date": "2023-12-24",
@@ -119,8 +119,8 @@
       "invitees": "tom@gmail.com, laura@gmail.com",
       "organizers": "george@gmail.com",
       "invitationCard": "invitation_card.pdf"
-      },
-      {
+    },
+    {
       "id": 9,
       "name": "New Year's Eve Party",
       "date": "2023-12-31",
@@ -134,8 +134,8 @@
       "invitees": "chris@gmail.com, karen@gmail.com",
       "organizers": "susan@gmail.com",
       "invitationCard": "invitation_card.png"
-      },
-      {
+    },
+    {
       "id": 10,
       "name": "Valentine's Day Dance",
       "date": "2024-02-14",
@@ -149,8 +149,8 @@
       "invitees": "kevin@gmail.com, michelle@gmail.com",
       "organizers": "jennifer@gmail.com",
       "invitationCard": "invitation_card.jpg"
-      },
-      {
+    },
+    {
       "id": 11,
       "name": "Kwanjuru Wedding",
       "date": "2024-05-14",
@@ -164,6 +164,6 @@
       "invitees": "kevin@gmail.com, michelle@gmail.com",
       "organizers": "jennifer@gmail.com, kennedy@gmail.com",
       "invitationCard": "traditional-kwanjura-wedding-cards.jpg"
-      }
+    }
   ]
 }
