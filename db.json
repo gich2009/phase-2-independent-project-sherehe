@@ -42,7 +42,7 @@
       "startTime": "13:00",
       "invitees": "john@gmail.com, amy@gmail.com",
       "organizers": "paul@gmail.com",
-      "invitationCard": null,
+      "invitationCard": "invitationCard.webp",
       "id": 3
     },
     {
@@ -72,7 +72,7 @@
       "startTime": "18:00",
       "invitees": "david@gmail.com, linda@gmail.com",
       "organizers": "mary@gmail.com",
-      "invitationCard": null,
+      "invitationCard": "artInvitation.jpg",
       "id": 5
     },
     {
@@ -84,10 +84,10 @@
       "paymentPlan": "dutch",
       "meetPlace": "Front gate",
       "meetTime": "20:00",
-      "startTime": "21:00",
+      "startTime": "21:30",
       "invitees": "steve@gmail.com, rachel@gmail.com",
       "organizers": "tina@gmail.com",
-      "invitationCard": null,
+      "invitationCard": "halloweenInvitation.jpg",
       "id": 6
     },
     {
@@ -102,7 +102,7 @@
       "startTime": "19:30",
       "invitees": "peter@gmail.com, carol@gmail.com",
       "organizers": "nancy@gmail.com",
-      "invitationCard": null,
+      "invitationCard": "movieInvitation.avif",
       "id": 7
     },
     {
@@ -118,7 +118,7 @@
       "startTime": "18:00",
       "invitees": "tom@gmail.com, laura@gmail.com",
       "organizers": "george@gmail.com",
-      "invitationCard": "invitation_card.pdf"
+      "invitationCard": "carolInvitation.jpg"
     },
     {
       "id": 9,
@@ -133,7 +133,7 @@
       "startTime": "21:00",
       "invitees": "chris@gmail.com, karen@gmail.com",
       "organizers": "susan@gmail.com",
-      "invitationCard": "invitation_card.png"
+      "invitationCard": "newyearsInvitation.png"
     },
     {
       "id": 10,
@@ -148,7 +148,7 @@
       "startTime": "20:00",
       "invitees": "kevin@gmail.com, michelle@gmail.com",
       "organizers": "jennifer@gmail.com",
-      "invitationCard": "invitation_card.jpg"
+      "invitationCard": "valentinesInvitation.jpg"
     },
     {
       "id": 11,

@@ -1,70 +1,74 @@
-# Getting Started with Create React App
+# 🎉 Welcome to Sherehe! 🎉
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Sherehe is an incredibly powerful, user-friendly event management app that puts the fun back in organizing your events! By centralizing all the information about a user's events, Sherehe helps you easily manage and plan unforgettable gatherings with friends and family. No more stress, no more hassle - it's time to celebrate life with Sherehe!
 
-## Available Scripts
+## 🌟 Stellar Features
 
-In the project directory, you can run:
+- 📅 Manage all your events in one convenient place
+- 🎯 Schedule meetings and events with ease and precision
+- 💸 Set up payment plans for your events in a snap
+- 👥 Keep track of invitees and organizers effortlessly
+- 💌 Send out beautifully-designed invitation cards
+- 🕒 Utilizes the World Time API to track event creation time and use it as a signature
 
-### `npm start`
+## 🚀 Getting Started
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Follow these simple steps to set up and run Sherehe on your local machine, and get ready to revolutionize the way you plan your events!
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### ✅ Prerequisites
 
-### `npm test`
+- Node.js installed on your machine
+- A web browser that supports modern web technologies
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### 🔧 Installation
 
-### `npm run build`
+1. Clone the repository:
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+git clone https://github.com/gich2009/phase-1-independent-project-sherehe.git
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+2. Change to the `sherehe` directory:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+cd sherehe
 
-### `npm run eject`
+3. Install dependencies:
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+npm install
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+### 🏃 Running the App
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+1. Start the server by running:
 
-## Learn More
+npm run server
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+The server will be running on port 3001.
 
-### Code Splitting
+2. In another terminal, start the app by running:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+npm start
 
-### Analyzing the Bundle Size
+The app will be running on port 3000.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+3. Open your web browser and navigate to:
 
-### Making a Progressive Web App
+The endpoint is http://localhost:3000/events
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+Now you're all set to start exploring the exciting world of Sherehe and manage your events like never before!
 
-### Advanced Configuration
+## 🤝 Contributing
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+We welcome contributions from enthusiastic developers like you! Please read [CONTRIBUTING.md](CONTRIBUTING.md) for details on our code of conduct and the process for submitting pull requests.
 
-### Deployment
+## 📄 License
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details.
+The author of this project is Amos Wanene.
 
-### `npm run build` fails to minify
+## 👏 Acknowledgments
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- A massive thank you to all the talented contributors who made this project possible and brought Sherehe to life.
+
+
+
+

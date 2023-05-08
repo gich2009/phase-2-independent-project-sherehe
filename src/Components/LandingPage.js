@@ -1,12 +1,11 @@
 import { React } from "react";
 import { useNavigate } from "react-router-dom";
 
-const landingPage = "./pexels-ylanite-koppens-796605.jpg";
-// const landingPage = "./landingPage.jpg";
+// const landingPage = "./pexels-ylanite-koppens-796605.jpg"; //not sure which alternative is faster.
 
 function LandingPage(){
   const navigate = useNavigate();
-
+  const landingPage = "./pexels-ylanite-koppens-796605.jpg";
   function handleLogIn(){
     navigate("/login");
   }

@@ -4,7 +4,6 @@ import LandingPage from './Components/LandingPage';
 import SignupPage from './Components/SignupPage';
 import Loginpage from './Components/LoginPage';
 import HomePage from './Components/HomePage';
-import Welcome from './Components/Welcome';
 
 function App() {
 
@@ -14,7 +13,6 @@ function App() {
         <Route exact path="/"        element={<LandingPage />}/>
         <Route exact path="/signup"  element={<SignupPage />}/>
         <Route exact path="/login"   element={<Loginpage />}/>
-        <Route exact path="/welcome" element={<Welcome />}/>
         <Route exact path="/home/*"  element={<HomePage />}/>
         <Route path="*"              element={<h1>404 page not found</h1>} />
       </Routes>
@@ -23,3 +21,5 @@ function App() {
 }
 
 export default App;
+
+{/* <Route exact path="/welcome" element={<Welcome />}/> */}

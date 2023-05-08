@@ -29,9 +29,10 @@ function UpdateEvent({ onUpdateEvent }) {
     setFormData({ ...formData, [name]: value });
   };
 
-  const handleFileChange = (e) => {
-    setFormData({ ...formData, invitationCard: e.target.files[0] });
-  };
+   //Will work on the file functionality in a future version.
+  // const handleFileChange = (e) => {
+  //   setFormData({ ...formData, invitationCard: e.target.files[0] });
+  // };
 
 const handleSubmit = (e) => {
     e.preventDefault();
@@ -45,26 +46,11 @@ const handleSubmit = (e) => {
                                       })
     .then((response) => response.json())
     .then((data) => {console.log(data);
-      // setFormData({
-          //   name: data.name,
-          //   date: data.date,
-          //   description: data.description,
-          //   location: data.location,
-          //   transport: data.transport,
-          //   paymentPlan: data.paymentPlan,
-          //   meetPlace: data.meetPlace,
-          //   meetTime: data.meetTime,
-          //   startTime: data.startTime,
-          //   invitees: data.invitees,
-          //   organizers: data.organizers,
-          //   invitationCard: data.invitationCard,
-          // });
           const updatedEvent = {id: event.id, ...formData};
           console.log(updatedEvent);
 
           onUpdateEvent(updatedEvent);
           navigate("/home/myevents");
-          // navigate(`./../..`);
         });
   };
 
