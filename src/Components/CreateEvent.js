@@ -1,5 +1,4 @@
 import { React, useState} from "react";
-import { useNavigate } from "react-router-dom";
 import { endpoint } from "./HomePage";
 
 
@@ -17,8 +16,6 @@ function CreateEvent() {
     organizers: '',
     invitationCard: '',
   });
-
-  const navigate = useNavigate();
 
   const handleChange = (e) => {
     const { name, value } = e.target;

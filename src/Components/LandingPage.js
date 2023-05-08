@@ -1,11 +1,10 @@
 import { React } from "react";
 import { useNavigate } from "react-router-dom";
 
-// const landingPage = "./pexels-ylanite-koppens-796605.jpg"; //not sure which alternative is faster.
-
 function LandingPage(){
   const navigate = useNavigate();
   const landingPage = "./pexels-ylanite-koppens-796605.jpg";
+  
   function handleLogIn(){
     navigate("/login");
   }
@@ -18,8 +17,7 @@ function LandingPage(){
   return(
     <div className="landingPage">
       <span>
-          <img src={landingPage} />
-        {/* <h2 className="imageText">Sign up now to start organizing your events</h2> */}
+          <img src={landingPage} alt="colorful ribbon on beige background" />
       </span>
       <span>
         <div>
